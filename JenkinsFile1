@@ -27,7 +27,7 @@ pipeline{
             agent any
             steps{
                 git 'https://github.com/devops-trainer/DevOpsClassCodes.git'
-                bat 'mvn test'
+                sh 'mvn test'
             }
         }
         stage('MetricCheck'){
@@ -39,7 +39,7 @@ pipeline{
         stage('Package'){
             agent any
             steps{
-                bat 'mvn package'
+                sh 'mvn package'
             }
         }
     }
